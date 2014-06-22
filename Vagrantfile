@@ -32,7 +32,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     # docker
     #
     yum install -y docker-io
-    sed -i 's,^other_args="",other_args="-H tcp://0.0.0.0:4243 -H unix:// -dns 8.8.8.8",g' /etc/sysconfig/docker
+    sed -i 's,^other_args=.*$,other_args="-H tcp://0.0.0.0:4243 -H unix:// -dns 8.8.8.8",g' /etc/sysconfig/docker
     chkconfig docker on
     service docker restart
   EOT
