@@ -11,7 +11,7 @@ $ vagrant up
 ## build docker image
 
 ```
-$ docker build -t smaple .
+$ docker build -t sample .
 ```
 
 ## run docker container
