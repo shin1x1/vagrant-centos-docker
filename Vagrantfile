@@ -24,6 +24,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     /sbin/service iptables stop
     /sbin/chkconfig iptables off
     #
+    # upgrade device-mapper-libs
+    #
+    yum upgrade -y device-mapper-libs
+    #
     # yum repository
     #
     rpm -ivh http://ftp.riken.jp/Linux/fedora/epel/6/i386/epel-release-6-8.noarch.rpm
